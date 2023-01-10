@@ -1,0 +1,363 @@
+@import url('https://fonts.googleapis.com/css2?family=Azeret+Mono:wght@300&family=Quicksand:wght@400;500;700&family=Turret+Road&family=Varela+Round&display=swap');
+* {
+    margin: 0;
+    padding: 0;
+    text-align: center;
+    font-family: Quicksand;
+    background-color: #eee;
+    color: rgba(0, 0, 0, 0.7);
+    font-weight: 400;
+    text-decoration: none;
+}
+
+/*Nav Styles*/
+
+.nav {
+    display: flex;
+    align-items: center;
+    width: 90vw;
+    height: 7vh;
+    border-bottom: 2px solid #ddd;
+    flex-wrap: nowrap;
+    margin:auto;
+    margin-top: 2vh;
+}
+
+
+.Li {
+    text-decoration: none;
+    border: none;
+    font-family: Azeret Mono;
+    transition: 0.3s ease-in-out;
+    color: #9c9c9c;
+}
+
+.Li:hover {
+    color:rgba(0, 0, 0, 0.9)
+}
+
+.nav ul {
+    display: flex;
+    gap: 2vw;
+    margin-left: 2vw;
+    justify-content: flex-end;
+    padding-right: 3vw;
+}
+
+.nav ul Li {
+    display: inline-block;
+    font-size: 15pt;
+}
+
+.nav h1 {
+    padding-left: 3vw;
+    cursor: pointer;
+    user-select: none;
+}
+
+.logo {
+    color: #444;
+    font-family: Turret Road;
+    font-size: 32pt;
+}
+
+/*SortingVis Styles*/
+
+.array-container {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    width:80vw;
+    height: 70vh;
+    margin: 0 10vw;
+    margin-top: 5vh;
+    align-items: flex-end;
+}
+
+.array-bar {
+    background-color: #444;
+    border-radius: 2px;
+}
+
+.line {
+    width: 79.7vw;
+    height: 0.25vh;
+    border: none;
+    background-color: #9c9c9c;
+    margin: 0 auto;
+}
+
+.inputs {
+    display: flex;
+}
+
+
+.btn-group {
+    display: flex;
+    flex-wrap: wrap;
+    width: 40vw;
+    align-items: center;
+    margin-left: 10vw;
+    justify-content: space-evenly;
+    margin-top: 1vh;
+}
+
+.btn {
+    cursor: pointer;
+    width: 12vw;
+    border:none;
+    margin-bottom: 1.5vh;
+    color:#eee;
+    background-color: #c2c2c2;
+    border-radius: 5px;
+    height: 3vh;
+    font-size: 12pt;
+    font-family: Azeret Mono;
+    font-weight: bold;
+    transition: 0.3s ease-in-out;
+}
+
+.btn:hover {
+    background-color: #444;
+}
+
+.slider-group {
+    display: flex;
+    width: 40vw;
+    margin-top: 1vh;
+    align-items: center;
+    height: 3vh;
+    justify-content: space-evenly;
+    margin-right: 10vw;
+}
+
+.slider {
+    -webkit-appearance: none;
+    cursor: pointer;
+    outline: none;
+    width: 10vw;
+    height: .5vh;
+    border-radius: 5px;
+    background:#9c9c9c;
+}
+
+.slider::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    width: 1.25vh;
+    height: 1.25vh;
+    background-color: #444;
+    border-radius: 50%;
+    cursor: pointer;
+    box-shadow: 0 0 0 0 rgba(68, 68, 68, 0.1);
+    transition: 0.3s ease-in-out;
+}
+
+.slider::-webkit-slider-thumb:hover {
+    box-shadow: 0 0 0 0.6vh rgba(68, 68, 68, 0.1);
+}
+
+/*Soduku Solver*/
+
+.sod-solver {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    flex-wrap: wrap;
+    margin: 5vh 10vw;
+}
+
+.board {
+    display: flex;
+    flex-direction: column;
+    width: 72vh;
+    outline: 2px solid black;
+}
+
+.row {
+    height: 8vh;
+    display: flex;
+    align-items: center;
+}
+
+.border-bottom {
+    border-bottom: 2px solid #444;
+}
+
+.border-right {
+    border-right: 2px solid #444;
+}
+
+.cell {
+    width: 8vh;
+    height: 8vh;
+    outline: 1px solid #444;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    transition: 0.3s ease-in-out;
+    font-size: 15pt;
+}
+
+.num-input {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    width: 24vw;
+    height: 32vw;
+    justify-content: space-evenly;
+}
+
+.inp {
+    width: 7vw;
+    height: 7vw;
+    outline: none;
+    cursor: pointer;
+    border: 1px solid #444;
+    color: black;
+    border-radius: 5px;
+    font-size: 15pt;
+    transition: 0.3s ease-in-out;
+}
+
+.inp:hover {
+    background-color: rgba(0, 0, 0, 0.3);
+}
+
+.del {
+    width: 14vw;
+}
+
+.clear {
+    width: 10vw;
+    height: 3vh;
+    border: 1px solid #444;
+    border-radius: 3px;
+    margin-top: 2vh;
+    cursor: pointer;
+    transition: 0.3s ease-in-out;
+    outline: none;
+}
+
+.clear:hover {
+    background-color: #e73e3e;
+}
+
+.del:hover {
+    background-color: #e73e3e;
+}
+
+.sol:hover {
+    background-color: rgb(111, 221, 111);
+}
+
+.sodSlider {
+    width: 20vw !important;
+    margin-bottom: 3vh;
+}
+
+.hide {
+    visibility: hidden;
+}
+
+/*Pathfinding Viss*/
+
+
+.pathfinding-container {
+    margin-top: 12vh;
+}
+
+.pathfinding {
+    width: 15vw;
+    margin-bottom: none;
+    height: 0.5vh;
+}
+@keyframes searching {
+    from {background-color: rgb(90, 234, 71);}
+    to {background-color: rgb(72, 197, 197);}
+}
+
+.grid-container {
+    display: flex;
+    flex-direction: column;
+    width: 90vw;
+    margin: auto;
+    outline: 2px solid black;
+}
+
+.grid-row {
+    height: 1.5vw;
+    display: flex;
+    align-items: center;
+}
+
+.grid-cell {
+    width: 1.5vw;
+    height: 1.5vw;
+    outline: 1px solid #444;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    font-size: 15pt;
+    user-select: none;
+    transition: 0.3s ease-in-out;
+}
+
+.wall {
+    background-color: rgb(100, 100, 100);
+}
+
+.searched {
+    background-color: rgb(72, 197, 197);
+    animation: searching 2.5s;
+}
+
+.path {
+    background-color: gold;
+}
+
+.btn-container {
+    float: left;
+    display: flex;
+    width: 55vw;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.btn-container button {
+    height: 4vh;
+    width: 10vw;
+    cursor: pointer;
+    outline: none;
+    border: 1px solid #444;
+    border-radius: 3px;
+    transition: 0.3s ease-in-out;
+    justify-content: space-between;
+}
+
+.btnslider-container {
+    display: flex;
+    width: 90vw;
+    justify-content: space-between;
+    align-items: center;
+    margin: auto;
+    margin-bottom: 2vh;
+}
+
+.btn-container button:hover {
+    background-color: rgb(0,0,0,0.2);
+}
+
+.slider-container {
+    font-size: 12pt;
+    display: flex;
+    align-items: center;
+}
+
+.slider-container input {
+    margin-left: 2vw;
+}
+
+
+
