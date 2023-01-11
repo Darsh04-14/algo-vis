@@ -359,5 +359,17 @@
     margin-left: 2vw;
 }
 
+/*HomePage*/
+.home-body {
+    margin-top: 5vh;
+}
+.home-body h1 {
+    color: #9c9c9c;
+}
+
+.home-body p {
+    margin-top: 2vh;
+    color: #9c9c9c; 
+}
 
 
